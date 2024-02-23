@@ -5,7 +5,7 @@ const ProjectsPage = () => {
     return (
         <div>
             <h1>Welcome to My Portfolio!</h1>
-            <p>Hi, I'm Amram, a Data Scientist and Machine Learning Engineer.</p>
+            <p>Hi, I'm Amram. These are my skills and goals.</p>
         </div>
     );
 };
