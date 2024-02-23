@@ -1,0 +1,94 @@
+.chart-container {
+    position: absolute; /* Set the container to relative for absolute positioning of children */
+    height: 600px; /* Adjust the size as needed */
+    width: 600px; /* Adjust the size as needed */
+    margin: auto; /* Center the container */
+    padding: 4rem;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 50%; /* Start at 50% from the top */
+    left: 50%; /* Start at 50% from the left */
+    transform: translate(-50%, -50%); /* Offset by half the size of the element */
+    box-shadow: 0px 0px 10px #000;
+}
+
+.canvas {
+    position: absolute; /* Absolute position */
+    top: 50%; /* Start at 50% from the top */
+    left: 50%; /* Start at 50% from the left */
+    transform: translate(-50%, -50%); /* Offset by half the size of the element */
+    height: 80%; /* Adjust the size to fit within the border */
+    width: 80%; /* Adjust the size to fit within the border */
+}
+
+.back-button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    position: absolute; /* Position the button absolutely */
+    top: 20%; /* Position the button vertically centered */
+    left: 20%; /* Position the button horizontally centered */
+    transform: translate(-50%, -50%); /* Move the button back to the center */
+    background-color: transparent;
+    border: 8px solid transparent;
+    border-radius: 50% 0 0 100%; /* Top-left and bottom-right rounded */
+    transform: rotate(-135deg);
+}
+
+.back-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%) rotate(135deg); /* Adjust rotation to point to the left */
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent; /* Adjust arrow size */
+    border-bottom: 8px solid transparent; /* Adjust arrow size */
+    border-right: 12px solid rgba(128, 128, 128, 0.7); /* Adjust arrow width and color */
+}
+
+/*.back-button::after {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    top: calc(50% + 2px); !* Adjust vertical position to align with the top of the arrow *!*/
+/*    left: 11px;*/
+/*    transform: translateY(-50%);!* Adjust horizontal position to start from the right side of the arrow *!*/
+/*    width: 8px; !* Adjust line width *!*/
+/*    height: 4px; !* Adjust line height *!*/
+/*    background-color: rgba(128, 128, 128, 0.7); !* Use the same color and opacity as the arrow *!*/
+/*}*/
+
+/*.back-button::after {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: calc(50% + 4px); !* Adjust for alignment *!*/
+/*    transform: translateY(-50%) rotate(45deg);*/
+/*    width: 6px;*/
+/*    height: 10px;*/
+/*    background-color: transparent;*/
+/*    border: 2px solid rgba(128, 128, 128, 0.7);*/
+/*    border-top-width: 0; !* Remove top border *!*/
+/*}*/
+
+.back-button:hover::before {
+    border-right: 14px solid rgba(128, 128, 128, 0.7); /* Increase arrow width and opacity on hover */
+}
+
+.back-button:hover::after {
+    background-color: rgba(128, 128, 128, 0.7); /* Increase line opacity on hover */
+    border-right: 18px solid rgba(128, 128, 128, 0.7);
+}
+
+/* Scale the button on hover */
+.back-button:hover {
+    transform: translate(-50%, -50%) scale(1.2); /* Move back to center and increase size on hover */
+}
+
+
+
+

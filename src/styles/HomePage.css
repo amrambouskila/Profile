@@ -1,0 +1,25 @@
+.img-size {
+    width: 250px;
+    height: auto;
+}
+
+.introduction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.introduction img {
+    border-radius: 50%;
+    max-width: 150px; /* Adjust size as needed */
+    height: auto;
+    border: 3px solid #007bff; /* A blue border for some pop */
+}
+
+.introduction p {
+    font-size: 1.2rem;
+    color: #333;
+    max-width: 600px; /* Prevents the text from becoming too wide on larger screens */
+}
